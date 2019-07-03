@@ -1,14 +1,36 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
-      Ionic Blank
+      Counter app!
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+    <h1 style="text-align:center; font-size:72px">{{ counter }}</h1>
+    <p>{{ message }}</p>
+    <ion-button
+      color="primary"
+      expand="block"
+      fill="outline"
+      (click)="incrementPressed()"
+      >Increment</ion-button
+    >
+    <ion-button color="warning" expand="block" (click)="decrementPressed()"
+      >Decrement</ion-button
+    >
+    <ion-button color="danger" expand="block" (click)="resetPressed()"
+      >Reset</ion-button
+    >
+    <ion-button color="medium" expand="block" (click)="showAlertPressed()"
+      >Show Alert</ion-button
+    >
+    <ion-button
+      color="success"
+      expand="block"
+      (click)="showActionSheetPressed()"
+      >Show Action Sheet</ion-button
+    >
   </div>
 </ion-content>
